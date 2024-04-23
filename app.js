@@ -1,4 +1,4 @@
-// const heads = document.querySelector(".head")
+const result = document.querySelector(".app")
 // const tails = document.querySelector(".tail")
 
 function toss() {
@@ -8,8 +8,13 @@ const heads = 1
 const tails = 2
 
 if (logic==heads) {
-
+result.innerHTML="YOU WON A <br> TOSS"
 } 
 else
-    {console.log("You loss");}
+{result.innerHTML="YOU<br>LOSS"}
 }
+
+
+function tossAgain() {
+    result.innerHTML = "";
+  }
