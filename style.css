@@ -3,7 +3,6 @@ padding: 0px;
 box-sizing: border-box;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 background-color: #12263A;
-/* text-shadow: 1px 1px 1px black; */
 }
 
 .button{display: flex;
@@ -46,6 +45,7 @@ text-shadow: 2px 2px 2px #c5d8d1;
 margin-top: 20px;}
 
 .end{text-align: center;}
+
 button:hover{background-color:#00798C;}
 
 #but:hover{background-color: rgb(255, 0, 0);}
