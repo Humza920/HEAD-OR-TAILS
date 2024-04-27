@@ -18,3 +18,9 @@ else
 function tossAgain() {
     result.innerHTML = "";
   }
+
+
+  console.log(
+    function tossAgain() {
+        result.innerHTML = "";
+      });
