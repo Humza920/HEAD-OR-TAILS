@@ -1,14 +1,40 @@
 /* General Body Styling */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh;
     background: linear-gradient(135deg, #28313b, #485461);
+    background-attachment: fixed;
     color: #ffffff;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+    background-size: 200px 200px;
+    animation: move 20s linear infinite;
+    z-index: 0;
+}
+
+/* Subtle Animation for Background Movement */
+@keyframes move {
+    from {
+        transform: translateX(0) translateY(0);
+    }
+    to {
+        transform: translateX(100px) translateY(100px);
+    }
 }
 
 /* Container for layout */
@@ -18,8 +44,12 @@ body {
     padding: 20px;
     text-align: left;
     box-sizing: border-box; /* Prevents padding from affecting width */
+    z-index: 1; /* Ensures container stays on top */
+    position: relative;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.5); /* Adds a slight overlay to make content more readable */
+    border-radius: 15px;
 }
-
 /* Heading Styles */
 .head h1 {
     font-family: 'Poppins', sans-serif;
@@ -88,6 +118,7 @@ body {
     font-size: 1.3rem;
     font-weight: 500;
     color: #ffffff;
+    margin-bottom: 15px;
     padding: 15px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
